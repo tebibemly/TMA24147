@@ -2,7 +2,8 @@ import numpy as np
 import matplotlib.pyplot as plt
 from PIL import Image
 
-# Charger image
+
+
 img = Image.open('Image.png').convert('L')  # niveaux de gris
 img_array = np.array(img)
 

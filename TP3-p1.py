@@ -3,10 +3,6 @@ import matplotlib.pyplot as plt
 from scipy.io import wavfile
 
 
-# Partie 1 : Audio et sous-échantillonnage 
-
-# Charger un fichier audio (wav)
-# Remplacer 'audio.wav' par ton fichier réel
 audio_file = 'audio.wav'
 fs_orig, audio_data = wavfile.read(audio_file)
 
