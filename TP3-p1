@@ -1,0 +1,29 @@
+import numpy as np
+import matplotlib.pyplot as plt
+from scipy.io import wavfile
+
+
+# Partie 1 : Audio et sous-échantillonnage 
+
+# Charger un fichier audio (wav)
+# Remplacer 'audio.wav' par ton fichier réel
+audio_file = 'audio.wav'
+fs_orig, audio_data = wavfile.read(audio_file)
+
+# Sous-échantillonnage x10
+audio_sub = audio_data[::10]
+
+# Spectrogramme avant/après
+plt.figure(figsize=(10,4))
+plt.specgram(audio_data, Fs=fs_orig)
+plt.title("Spectrogramme original")
+plt.xlabel("Temps [s]")
+plt.ylabel("Fréquence [Hz]")
+plt.show()
+
+plt.figure(figsize=(10,4))
+plt.specgram(audio_sub, Fs=fs_orig/10)
+plt.title("Spectrogramme sous-échantillonné")
+plt.xlabel("Temps [s]")
+plt.ylabel("Fréquence [Hz]")
+plt.show()
